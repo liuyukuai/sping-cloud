@@ -1,0 +1,21 @@
+server:
+  port: 8081
+security:
+  user:
+    password: user
+  ignored: /
+  sessions: never   # session����
+  oauth2:
+    sso:
+      loginPath: /login
+    client:
+      clientId: client
+      clientSecret: secret
+      accessTokenUri: http://localhost:8080/oauth/token
+      userAuthorizationUri: http://localhost:8080/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8080/user
+      preferTokenInfo: false
+logging:
+  level:
+    org.springframework: DEBUG

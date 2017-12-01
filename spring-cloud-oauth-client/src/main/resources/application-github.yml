@@ -1,0 +1,21 @@
+server:
+  port: 8080
+security:
+  user:
+    password: user
+  ignored: /
+  sessions: never   # session����
+  oauth2:
+    sso:
+      loginPath: /login   # ��¼·��
+    client:
+      clientId: 84f59c9370d36ee0866b
+      clientSecret: 2b432d15fc091673b89e4461369f234b80e482d4
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+    resource:
+      userInfoUri: https://api.github.com/user
+      preferTokenInfo: false
+logging:
+  level:
+    org.springframework: DEBUG
