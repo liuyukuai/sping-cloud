@@ -1,0 +1,14 @@
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    username: blog
+    password: 1qaz3edc
+    url: jdbc:mysql://172.96.193.200/blog
+    driver-class-name: com.mysql.jdbc.Driver
+logging:
+ level:
+  org.springframework: DEBUG
+
