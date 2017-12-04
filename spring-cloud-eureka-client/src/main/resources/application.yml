@@ -1,0 +1,13 @@
+server:
+  # 端口
+  port: 8084
+  # 配置地址
+  address: localhost
+eureka:
+  client:
+    service-url:
+      # eureke 地址
+      defaultZone: http://localhost:8083/eureka/
+spring:
+  application:
+    name: demo
