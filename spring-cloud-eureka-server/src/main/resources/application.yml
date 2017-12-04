@@ -1,0 +1,17 @@
+# 配置基本的认证
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password
+server:
+  port: 8083
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
